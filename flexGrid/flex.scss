@@ -1,0 +1,42 @@
+$Wrapper-Size: 64rem;
+$col-padding: 10px;
+$Flex-columns: 12;
+$md: 60rem;
+$box-size: border-box;
+
+*{
+	-webkit-box-sizing: $box-size;
+	-moz-box-sizing: $box-size;
+	box-sizing: $box-size;
+}
+
+html,body{
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper{
+	margin: 0 auto;
+	max-width: $Wrapper-Size;
+}
+
+.flex-row{
+	display: flex;
+	flex-direction: row;
+}
+
+[class*="col-"]{
+	padding: $col-padding;
+}
+
+  @for $i from 1 through $Flex-columns {
+    .col-#{$i} {
+        flex: $i / $Flex-columns * 100%;
+    }
+  }
+
+@media (max-width: $md) {
+  .flex-row {
+    flex-direction: column;
+  }
+}
