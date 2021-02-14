@@ -7,9 +7,10 @@
 		
 		<style>
 			.demo{
-				background-color: #fff949;
-				border: 1px solid #f8a500;
+				background-color: #eee;
+				border: 1px solid #ddd;
 				text-align: center;
+				padding: 4px 8px;
 			}
 		</style>
 	</head>
@@ -18,67 +19,77 @@
 	<h2 style="text-align: center;">A simple Flex Grid System For Page Layouts</h2>
 	
 	<div class="wrapper">
-		<div class="flex-row">
-			<div class="col-1 demo">
-				1
+		<div class="row">
+			<div class="column sm demo">
+				1/1
 			</div>
-			<div class="col-11 demo">
-				11
-			</div>
+		</div>
+		<div class="row">
+		<div class="column demo sm">
+			1/6
+		</div>
+		<div class="column demo sm">
+			1/6
+		</div>
 		</div>
 		
-		<div class="flex-row">
-			<div class="col-2 demo">
-				2
-			</div>
-			<div class="col-10 demo">
-				10
-			</div>
+		<div class="row">
+		<div class="column demo sm">
+			1/3
 		</div>
-
-		<div class="flex-row">
-			<div class="col-3 demo">
-				3
-			</div>
-			<div class="col-9 demo">
-				9
-			</div>
+		<div class="column demo sm">
+			1/3
 		</div>
-		
-		<div class="flex-row">
-			<div class="col-4 demo">
-				4
-			</div>
-			<div class="col-8 demo">
-				8
-			</div>
-		</div>
-
-		<div class="flex-row">
-			<div class="col-5 demo">
-				5
-			</div>
-			<div class="col-7 demo">
-				7
-			</div>
-		</div>
-
-		<div class="flex-row">
-			<div class="col-6 demo">
-				6
-			</div>
-			<div class="col-6 demo">
-				6
-			</div>
-		</div>
-
-		<div class="flex-row">
-			<div class="col-12 demo">
-				12
-			</div>
+		<div class="column demo sm">
+			1/3
 		</div>
 		
 		</div>
+		
+		<div class="row">
+		<div class="column demo sm">
+			1/4
+		</div>
+		<div class="column demo sm">
+			1/4
+		</div>
+		<div class="column demo sm">
+			1/4
+		</div>
+		<div class="column demo sm">
+			1/4
+		</div>
+		</div>
+		
+		<div class="row">
+		<div class="column col-1 sm demo">
+			col-1
+		</div>
+		<div class="column sm demo">
+			11
+		</div>
+		
+		</div>
+		<p style="text-align: center;">No Gutters</p>
+		<div class="row no-gutter">
+		<div class="column sm col-2 demo">
+			col-2
+		</div>
+		<div class="column sm demo">
+			10
+		</div>
+		</div>
+		
+		<div class="row no-gutter">
+		<div class="column sm col-3 demo">
+			col-3
+		</div>
+		<div class="column sm demo">
+			9
+		</div>
+		</div>
+		
+	</div>
 
 	</body>
 </html>

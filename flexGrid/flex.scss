@@ -1,42 +1,88 @@
 $Wrapper-Size: 64rem;
 $col-padding: 10px;
 $Flex-columns: 12;
-$md: 60rem;
+$md: 48rem;
+$lg: 62rem;
+$sm: 30rem;
+$col-gutters: 10px;
 $box-size: border-box;
 
-*{
-	-webkit-box-sizing: $box-size;
-	-moz-box-sizing: $box-size;
-	box-sizing: $box-size;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html,body{
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: $Wrapper-Size;
+}
+
+.row {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 1;
+  margin: $col-gutters;
+}
+
+.no-gutter > .column{
 	margin: 0;
-	padding: 0;
-}
-
-.wrapper{
-	margin: 0 auto;
-	max-width: $Wrapper-Size;
-}
-
-.flex-row{
-	display: flex;
-	flex-direction: row;
-}
-
-[class*="col-"]{
-	padding: $col-padding;
 }
 
   @for $i from 1 through $Flex-columns {
     .col-#{$i} {
-        flex: $i / $Flex-columns * 100%;
+    -ms-flex-preferred-size: (100% / 12) * $i;
+    -webkit-flex-basis: (100% / 12) * $i;
+    flex-basis: (100% / 12) * $i;
+    max-width: (100% / 12) * $i;
     }
   }
 
-@media (max-width: $md) {
-  .flex-row {
-    flex-direction: column;
+@media screen and (max-width: $md) {
+  .wrapper {
+    overflow: auto;
+  }
+   .column.md {
+     flex: 100%;
+     max-width: 100%;
+     margin-left: 0;
+     margin-right: 0;
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .wrapper {
+    overflow: auto;
+  }
+   .column.lg {
+     flex: 100%;
+     max-width: 100%;
+     margin-left: 0;
+     margin-right: 0;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper {
+    overflow: auto;
+  }
+   .column.sm {
+     flex: 100%;
+     max-width: 100%;
+     margin-left: 0;
+     margin-right: 0;
   }
 }
